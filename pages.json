@@ -1,0 +1,320 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				},
+				 "scope.userLocation": {
+				      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+				    }
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+				
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/wecome/wecome",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/cooperation/cooperation",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/vipbuy/vipbuy",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/shopinfo/shopinfo",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/sousuo/sousuo",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/detailpage/detailpage",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"backgroundColor":"#F5F5F5",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/updatum/updatum",
+			"style": {
+				"navigationStyle": "custom",
+					"app-plus":{
+					"scrollIndicator":"none" //当前页面不显示滚动条
+				
+					},
+					"scrollIndicator": "none"
+			}
+		},
+		{
+			"path": "pages/operation/operation",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/compile/compile",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/shoujihao/shoujihao",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/fenyong/fenyong",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/fensi/fensi",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/teamorder/teamorder",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/message/message",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/help/help",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/bingZhifubao/bingZhifubao",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/paypassword/paypassword",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/bindPhone/bindPhone",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/paycode/paycode",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/integral/integral",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/tixian/tixian",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/tixian/tixianresult",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+				  "titleNView":{  
+					 "autoBackButton":false 
+					}
+				 } 
+			}
+		},
+		{
+			"path": "pages/login/reg",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/login/forgetpass",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/login/loginout",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/login/qrcode",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "light",
+		"navigationBarTitleText": "惠食天下",
+		"navigationBarBackgroundColor": "#f65535",
+		"navigationBarTextStyle":"white"
+		
+	},
+	  "tabBar": {
+	    "backgroundColor": "#F8F8FF",
+	    "color": "#666666",
+	    "selectedColor": "#5667ED",
+	    "borderStyle": "white",
+	    "list": [
+	      {
+	        "selectedIconPath": "static/shouye-2.png",
+	        "iconPath": "static/shouye.png",
+	        "pagePath": "pages/index/index",
+	        "text": "首页"
+	      },
+	      {
+	        "selectedIconPath": "static/dingdan-2.png",
+	        "iconPath": "static/dingdan.png",
+	        "pagePath": "pages/order/order",
+	        "text": "订单"
+	      },
+	      {
+	        "selectedIconPath": "static/wode-2.png",
+	        "iconPath": "static/wode.png",
+	        "pagePath": "pages/mine/mine",
+	        "text": "我的"
+	      }
+	    ]
+	  },
+	  "usingComponents": {
+	   "cu-custom": "/colorui/components/cu-custom"
+	  
+	}
+}

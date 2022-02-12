@@ -1,0 +1,24 @@
+{
+  "name": "uniapphstx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "vue-jsonp": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeartLee/unigoufeitian.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeartLee/unigoufeitian/issues"
+  },
+  "homepage": "https://github.com/HeartLee/unigoufeitian#readme"
+}
