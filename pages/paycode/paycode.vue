@@ -78,7 +78,8 @@
 							  filePath: item, //这个就是我们上面拍照返回或者先中照片返回的数组
 							  name: 'file',
 							  success: (uploadFileRes) => {
-								that.weixinImage = JSON.parse(uploadFileRes.data).data;
+								that.zhifubaoImage = JSON.parse(uploadFileRes.data).data;
+								// that.weixinImage = JSON.parse(uploadFileRes.data).data;
 								that.uploaduserinfo(that);
 							  }
 							});
@@ -104,12 +105,12 @@
 			  if(that.currentTab == 0){
 			    data = {
 			      openid:localStorage.getItem("opendid"),
-			      weixin_url:that.weixinImage
+			      zhifubao_url:that.zhifubaoImage
 			    }
 			  }else{
 			    data = {
-			      openid:localStorage.getItem("opendid"),
-			      zhifubao_url:that.zhifubaoImage
+					openid:localStorage.getItem("opendid"),
+					weixin_url:that.weixinImage
 			    }
 			  }
 			    wx.request({
