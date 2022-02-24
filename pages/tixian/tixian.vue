@@ -4,13 +4,13 @@
 		  <view class="codeView">
 		    <view class="title">提现到我的提款二维码</view>
 		    <view class="imageView">
-		      <image :src="userInfo.weixin_url"></image>
+		      <image :src="userInfo.zhifubao_url" mode="aspectFit"></image>
 		    </view>
 		  </view>
 		  <view class="jifenView">
 		    <view style="font-size:24rpx">提现积分</view>
 		    <input placeholder="请输入提现积分"  v-model="money"></input>
-        <input placeholder="请输入支付密码"  v-model="password"></input>
+        <!-- <input placeholder="请输入支付密码"  v-model="password"></input> -->
 		   <view class="tishiView">
 		    <view >当前积分:{{userInfo.money}}分,</view>
 		    <view style="color:red;margin-left:20rpx" @click="alltixian">全部提现</view>
@@ -51,7 +51,7 @@
 				    allmoney:'',
 				    userInfo:{},
 				    isShowPwdWrap: false,
-				    password: '',
+				    // password: '',
 				    inputFocus: true,
 				    check:true,
 			}
@@ -87,9 +87,8 @@
 			txmoney:function () {
 			     var _this = this;
 
-			     if(_this.userInfo.weixin_url == null){
+			     if(_this.userInfo.zhifubao_url == null){
 			       var option = {
-			         weixin_url:_this.userInfo.weixin_url,
 			         zhifubao_url:_this.userInfo.zhifubao_url
 			     }
              uni.showModal({
@@ -108,23 +107,23 @@
 			       })
 			       return
 			     }
-			     if(_this.userInfo.paypassword == null){
+			     // if(_this.userInfo.paypassword == null){
 
-             uni.showModal({
-			         title: '提示',
-			         content: '您还没设置支付密码',
-			         confirmText: '去设置',
-			         confirmColor: '#f65535',
-			         success (res) {
-			           if (res.confirm) {
-                   uni.navigateTo({
-			               url: '../paypassword/paypassword?phonetext=' + _this.userInfo.mobile
-			             })
-			           }
-			         }
-			       })
-			       return
-			     }
+        //      uni.showModal({
+			     //     title: '提示',
+			     //     content: '您还没设置支付密码',
+			     //     confirmText: '去设置',
+			     //     confirmColor: '#f65535',
+			     //     success (res) {
+			     //       if (res.confirm) {
+        //            uni.navigateTo({
+			     //           url: '../paypassword/paypassword?phonetext=' + _this.userInfo.mobile
+			     //         })
+			     //       }
+			     //     }
+			     //   })
+			     //   return
+			     // }
 			     if(_this.money == ''){
              uni.showToast({
 			         icon:"none",
@@ -144,13 +143,13 @@
 				      data: {
 				        money:_this.money,
 				         openid: localStorage.getItem("opendid"),
-				        password:_this.password
+				        // password:_this.password
 				      },
 				      success:function (res) {
                 _this.inputFocus = false;
                 _this.isShowPwdWrap = false;
                 _this.check = true;
-                _this.password = '';
+                // _this.password = '';
 
 				      
 				       if(res.data.status=='1'){

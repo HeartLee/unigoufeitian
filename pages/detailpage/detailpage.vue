@@ -43,7 +43,7 @@
 	                  <span class="yanse" style="margin-left: 20rpx;" v-else>¥{{orderInfo.fanli}} （0.5为活动报名费，订单审核通过后后扣费）</span>
 	              </view>
 				 
-				  <view v-if="orderInfo.reason != null"  style="color:red;margin-top: 10px;margin-bottom: 10px;">订单驳回原因：{{orderInfo.reason}}</view>
+				  <view v-if="!!orderInfo.reason"  style="color:red;margin-top: 10px;margin-bottom: 10px;">订单驳回原因：{{orderInfo.reason}}</view>
 				  
 				  
 	          </view>       

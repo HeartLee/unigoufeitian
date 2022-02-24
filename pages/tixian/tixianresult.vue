@@ -6,7 +6,7 @@
 	  <image src="../../static/iconsure.png" mode="widthFix"></image>
 	</view>
 	<view class="titleView">提现成功</view>
-	<view class="subTitleView">微信到账预计2个工作日,请注意查收！</view>
+	<view class="subTitleView">支付宝到账预计2个工作日,请注意查收！</view>
 	<view class="btn2" @click="backToHome">返回首页</view>
 	</view>
 </template>

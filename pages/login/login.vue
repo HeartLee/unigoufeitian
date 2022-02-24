@@ -1,11 +1,9 @@
 <template>
 <view class="main">
-
 	 <view class="titleView">
 		 欢迎登录惠食天下，探店优质美食
 	 </view>
-
-     <view style="margin-top: 10px;margin-left: 40px;">您的上级推荐人id为：{{userid}}</view>
+     <view v-if="!!userid" style="margin-top: 10px;margin-left: 40px;">您的上级推荐人id为：{{userid}}</view>
    
 	 <view class="contentView">
 	    <view class="image" >
@@ -18,7 +16,7 @@
 	    </view>
 	</view>
 	
-	<view class="contentView">
+	<!-- <view class="contentView">
 	    <view class="image" >
 	        <image   src="../../static/shoujihao.png" style="width:100%" mode="widthFix">
 	        </image>
@@ -28,7 +26,7 @@
 	   </input>
 	   </view>
 	   <img :src="versrc" @click="changeCode">
-	</view>
+	</view> -->
 	
 
 	<view class="contentView">
@@ -38,7 +36,7 @@
 	    </view>
 	    <view class="inputView" >
 			<view  class="buttonView">				
-			<button @click="codeClick" :disabled="smsFlag" :style="{'color':sendColor,'font-size':'28rpx', 'height':'80rpx', 'background-color': '#fff'}">{{sendTime}}</button>
+			<button @click="codeClick" :disabled="smsFlag" :style="{'color':sendColor,'font-size':'28rpx', 'height':'80rpx', 'background-color': '#fff', 'border-radius': '50rpx'}">{{sendTime}}</button>
 			</view> 
 	        <input v-model="code" placeholder="短信验证码" maxlength="6" style="height: 80rpx;width:200rpx;font-size: 32rpx;">
 	        </input>
@@ -46,13 +44,13 @@
 		
 	</view>
 	
-	<view style="color:#000;font-size: 12px;margin-top: 20px;padding:0 40px;line-height: 30px;">
+<!-- 	<view style="color:#000;font-size: 12px;margin-top: 20px;padding:0 40px;line-height: 30px;">
 		①图片验证码不区分大小写<span style="color:red">(安全无痛)</span></br>
 		②切换一张清晰可辨别的再输入即可</br>
 		③短信验证码有效期30天，一次收到，持续有效</br>
 		④首次登录后，关注置顶公众号:惠食天下外卖</br>
 
-	</view>
+	</view> -->
 	
 	
 	<view style="margin-bottom:30px;height: 30px;display:none ;">
@@ -77,7 +75,7 @@
 				    code:'',
 					verify:'',
 					versrc:'https://srxadmin.goufeitian.com/index.php/Api/Index/verify',
-					userid:'0',
+					userid: 0,
 				
 			}
 		},
@@ -89,14 +87,14 @@
 		methods:{
 			codeClick: function (){
 			  var that = this;
-			  if(that.verify == null || that.verify == ''){
-				  uni.showToast({
-							icon:"none",
-				  	      title:'请先输入图文验证码，然后再获取短信验证码！',
-				  	      duration: 2000
-				  	  });
-				  return;
-			  }	
+			  // if(that.verify == null || that.verify == ''){
+				 //  uni.showToast({
+					// 		icon:"none",
+				 //  	      title:'请先输入图文验证码，然后再获取短信验证码！',
+				 //  	      duration: 2000
+				 //  	  });
+				 //  return;
+			  // }
 			
 			
 			  uni.request({
@@ -152,6 +150,14 @@
 		  },
 		  sureClick: function (){
 		      var  that= this;
+			  if(!(that.phoneText && that.code)){
+				   uni.showToast({
+				  		icon:"none",
+				   	      title:'请输入手机号、短信验证码！',
+				   	      duration: 2000
+				   	  });
+			  	return;
+			  }
 		      uni.request({
 		        url: 'https://srxadmin.goufeitian.com/index.php/Api/Index/loginh5',
 		        data: {
@@ -182,10 +188,10 @@
 </script>
 
 <style>	
-	page{
-	  background: url(../../static/loginback.jpg) repeat;background-size:cover; 
+	page {
+	  background: url(../../static/loginback.png) repeat;
+	  background-size:cover; 
 	}
-
 	.background{
 	    width:100%;  
 	    height:100%;  /**宽高100%是为了图片铺满屏幕 */
@@ -213,7 +219,7 @@
 	.contentView{
 	  margin: 50rpx 80rpx 0rpx 80rpx;
 	   height: 100rpx;
-	 border: solid 1px #CCCCCC;
+	 border: solid 1px #f65535;
 	border-radius: 50rpx;
 		display: flex;
 	  flex-direction: row;
@@ -241,6 +247,9 @@
 	  height: 100rpx;
 	  line-height: 100rpx;
 	}
+	.inputView .uni-input-placeholder {
+		color: #423e3e;
+	}
 	.buttonView{
 	  display: flex;
 	  height: 80rpx;
@@ -263,5 +272,6 @@
 		text-align: center;
 		margin-left: 80rpx; 
 		margin-right: 80rpx;
-		background-color: #fff;}
+		/* background-color: #fff; */
+		}
 </style>
