@@ -67,25 +67,28 @@
 	
 	<block v-for="(item , index) in tabContent" :key="index">
 	  <!-- 列表 -->
-	  <view class='listBox'> 
+	  <view class='listBox' @click="godoShopinfo(item.id)"> 
 	   <view class='listTop'>
-	      <image mode="widthFix" :src="item.head" @click="godoShopinfo(item.id)" ></image>
+	      <image mode="widthFix" :src="item.head"></image>
 	      <view class="dianname" >
-	          <view class="namepu"  @click="godoShopinfo(item.id)"  >{{item.title}}</view>
+	          <view class="namepu" >{{item.title}}</view>
 	          <!-- <view class="diantime">9:00-22:00</view> -->
 	          <block  v-for="(item2 , index) in item.discont">
 	            <view class='listBottom'> 
 	              <view class="flex flex-wrap">
 	                <view class="flex  radius" style="justify-content: flex-start;align-items: center;">
 	              
-	                 <view class="desname" style="text-align:left;margin-top:10rpx;" >
+	                 <view class="desname" style="text-align:left;margin-top:10rpx;display: block;" >
 						 <image src="../../static/elment.png" style="width:25rpx;height:25rpx;margin-left:10rpx;" v-if="item2.type=='饿了么'"></image>
 						 <image src="../../static/meituan.png" style="width:25rpx;height:25rpx;margin-left:10rpx;" v-if="item2.type=='美团'"></image>
 						<span style="margin-left:15rpx; margin-top: 20rpx;">距离{{item2.distance}}km</span>
 						<span class="diantime">{{item2.iswork}}</span>
 	                 </view> 
+					<!-- <view v-if="item2.tag" style="display: block;margin-top:10rpx;">
+						 <span class="diantime">{{item2.tag}}</span>
+					 </view> -->
 	                </view>
-					   <view  style="margin-top: 30rpx;  flex-direction: row; display: flex;width:100%;padding:0 0 10rpx 0" >
+					   <view  style="margin-top: 30rpx;  flex-direction: row; display: flex;width:100%;padding:0 0 10rpx 0">
 					                  <view  v-if="item2.type=='美团'" style="width:70%; text-align: left;margin-top:10rpx;">
 					                        <view style="font-size:22rpx;color:#FBC715" >会员满{{item2.cost}}奖励{{item2.vipfanli}}积分</view>
 					                        <view style="font-size:22rpx;color:#FBC715" >非会员满{{item2.cost}}奖励{{item2.fanli}}积分</view>
@@ -106,14 +109,14 @@
 					                    </button>
 					                  </view> 
 					                  <view class='status' v-if="item2.remain_num!='0'">
-					                    <button class='btn1' v-if="item2.type=='美团' "  @click="submitinfo(item.shopid,item2)" style="background:#FBC715">
+					                    <button class='btn1' v-if="item2.type=='美团'" style="background:#FBC715">
 					                     <view>
-					                      抢购
+					                      去报名
 					                      </view>
 					                    </button>
-					                     <button class='btn1' v-if="item2.type=='饿了么'"  @click="submitinfo(item.shopid,item2)"   style="background:#3399ff">
+					                     <button class='btn1' v-if="item2.type=='饿了么'"  style="background:#3399ff">
 					                      <view >
-					                        抢购
+					                        去报名
 					                      </view>
 					                    </button>
 					                  </view> 
