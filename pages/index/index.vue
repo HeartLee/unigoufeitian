@@ -143,7 +143,7 @@
     <view class="mimaBg"  v-if="isshowCode" catchtouchmove='true'>
         <view class="mimaBgcontentView">
         <view class="image1">
-          <image src="../../static/qrcode.jpeg" style="width: 100%;" mode="aspectFit"></image>
+          <image src="../../static/qrcode.png" style="width: 100%;" mode="aspectFit"></image>
         </view>
         <view class="title1">
             扫码关注公众号联系客服
@@ -204,11 +204,11 @@ export default {
       isshowmjd: false,
       recordMain: [
         {
-          title: "免费探店-全部",
+          title: "附近商家",
         },
-        {
-          title: "可配送",
-        },
+        // {
+        //   title: "可配送",
+        // },
       ],
       tabContent: [],
       currentTab: 0,

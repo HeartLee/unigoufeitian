@@ -102,7 +102,6 @@
           content: value, //模板中提示的内容
           confirmText: '复制内容',
           success: () => { //点击复制内容的后调函数
-		  debugger
             //uni.setClipboardData方法就是讲内容复制到粘贴板
             // API `setClipboardData` is not yet implemented
             //意思是H5端没有这个接口！！！

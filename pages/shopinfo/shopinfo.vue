@@ -14,15 +14,15 @@
 	      <view class="tiaozhuang" v-if="shopInfo.shopid !='' && shopInfo.shopidelm !=''">
 	       <image src="../../static/meituan.png" mode="widthFix" style="margin-right: 10rpx;"></image>
 	       <image src="../../static/elment.png" mode="widthFix" ></image>
-	       <view class="text" @click="tiaozhuanAPP">复制店名</view>    
+	       <view class="text" @click="copyname(shopInfo.title)">复制店名</view>    
 	      </view>
 	       <view class="tiaozhuang" v-else-if="shopInfo.shopid !=''">
 	       <image src="../../static/meituan.png" mode="widthFix"></image>
-	       <view class="text" @click="tiaozhuanAPP">复制店名</view>    
+	       <view class="text" @click="copyname(shopInfo.title)">复制店名</view>    
 	      </view>
 	       <view class="tiaozhuang" v-else="shopInfo.shopidelm !=''">
 	       <image src="../../static/elment.png" mode="widthFix"></image>
-	       <view class="text" @click="tiaozhuanAPP">复制店名</view>    
+	       <view class="text" @click="copyname(shopInfo.title)">复制店名</view>    
 	      </view>
 	    </view>
 	  </view>
@@ -266,13 +266,17 @@
 		  		            var content = res.data.data;
 		  		            console.log(content);
 		  		            if(res.data.status=='1'){
-								if(item.type == '美团'){
-								  thatinfo.isshowCode1 = true;
-								  thatinfo.waimaiCode = thatinfo.qrcode_meituan;
-								}else{
-								  this.isshowCode1 = true;
-								  thatinfo.waimaiCode = thatinfo.qrcode_elm;
-								}
+								uni.showToast({
+								      icon:'none',
+								      title:res.data.info
+								    })
+								// if(item.type == '美团'){
+								//   thatinfo.isshowCode1 = true;
+								//   thatinfo.waimaiCode = thatinfo.qrcode_meituan;
+								// }else{
+								//   this.isshowCode1 = true;
+								//   thatinfo.waimaiCode = thatinfo.qrcode_elm;
+								// }
 		  		            // _this.rocessPay(JSON.parse(content))
 		  		          }else{
                         uni.showToast({
