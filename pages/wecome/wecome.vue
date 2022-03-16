@@ -17,9 +17,11 @@
 		data() {
 			return {
 				 imgs: [
-				      "../../static/guide_1.png",
-				      "../../static/guide_2.png",
-				      "../../static/guide_3.png",
+				      "../../static/guide_1.jpg",
+				      "../../static/guide_2.jpg",
+				      "../../static/guide_3.jpg",
+				      "../../static/guide_4.jpg",
+				      "../../static/guide_5.jpg",
 				   ],
 				   current:0,
 				   isflog:'',
