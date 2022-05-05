@@ -26,7 +26,7 @@
 	              <view class="paybodyright">
 	                <view class="title">{{orderInfo.shopname}}</view>
 	                <view class="desc">{{orderInfo.descc}}</view>
-	                <view class="price">¥{{orderInfo.money}}</view>
+	                <!-- <view class="price">¥{{orderInfo.money}}</view> -->
 	              </view>
 	          </view>
 	          <view class="tiaozhuan">
@@ -36,11 +36,9 @@
 	          <view class="payinfo">
 	              <view class="titl">支付信息</view>
 	              <view class="dss">
-	                 支付：
-	                 <span class="yanse">¥{{orderInfo.money}}</span>
-	                 <span class="fanli"> 返利</span>
-	                  <span class="yanse" style="margin-left: 20rpx;" v-if="orderInfo.vipflag == 1">¥{{orderInfo.vipfanli}} （0.5为活动报名费，订单审核通过后后扣费）</span>
-	                  <span class="yanse" style="margin-left: 20rpx;" v-else>¥{{orderInfo.fanli}} （0.5为活动报名费，订单审核通过后后扣费）</span>
+	                 <span class="fanli">返利</span>
+	                  <span class="yanse" style="margin-left: 20rpx;" v-if="orderInfo.vipflag == 1">¥{{orderInfo.vipfanli}}</span>
+	                  <span class="yanse" style="margin-left: 20rpx;" v-else>¥{{orderInfo.fanli}}</span>
 	              </view>
 				 
 				  <view v-if="!!orderInfo.reason"  style="color:red;margin-top: 10px;margin-bottom: 10px;">订单驳回原因：{{orderInfo.reason}}</view>
@@ -250,6 +248,7 @@
 	.paybody .paybodyright{
 	  padding-left:4%;
 	  display: inline-block;
+	  vertical-align: top;
 	  width: 65%;
 	}
 	.paybody .title{
@@ -307,7 +306,7 @@
 	}
 	.payinfo .yanse{color:#ff9933}
 	.payinfo .fanli{
-	  margin-left: 40rpx;
+	  /* margin-left: 40rpx; */
 	}
 	.payinfo .dss{
 	  margin-top: 20rpx;
