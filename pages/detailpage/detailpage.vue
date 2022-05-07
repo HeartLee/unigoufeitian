@@ -35,8 +35,10 @@
 	      
 	          <view class="payinfo">
 	              <view class="titl">支付信息</view>
-	              <view class="dss">
-	                 <span class="fanli">返利</span>
+	              <view class="dss"> 
+					支付：
+	                 <span class="yanse">¥{{orderInfo.cost}}</span>
+	                 <span class="fanli">返利：</span>
 	                  <span class="yanse" style="margin-left: 20rpx;" v-if="orderInfo.vipflag == 1">¥{{orderInfo.vipfanli}}</span>
 	                  <span class="yanse" style="margin-left: 20rpx;" v-else>¥{{orderInfo.fanli}}</span>
 	              </view>
@@ -295,8 +297,6 @@
 	  font-weight: bold;
 	  margin-top: 30rpx;
 	}
-	
-	
 	.payinfo{
 	  margin-top: 30rpx;
 	}
@@ -306,7 +306,7 @@
 	}
 	.payinfo .yanse{color:#ff9933}
 	.payinfo .fanli{
-	  /* margin-left: 40rpx; */
+	  margin-left: 40rpx;
 	}
 	.payinfo .dss{
 	  margin-top: 20rpx;
